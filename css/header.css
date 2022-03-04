@@ -1,0 +1,269 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    display: block;
+    margin-right: 8px;
+}
+
+.logo h2 {
+    font-weight: normal;
+}
+
+.nav {
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    margin-left: 22px;
+    color: #72787D;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #005FA3;
+}
+
+header .header__container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .city {
+    margin: 80px 0 35px;
+    max-width: 100%;
+    max-height: 328px;
+}
+
+.hero .cars {
+    max-width: 806px;
+    max-height: 58px;
+    margin-bottom: 75px;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero {
+    margin-top: 80px;
+}
+.hero .wrap__btns {
+    margin: 30px 0 80px;
+    display: flex;
+}
+.wrap__btns {
+    display: flex;
+}
+.hero h1 {
+    max-width: 818px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    text-align: center;
+}
+
+.nav__adaptive {
+    display: none;
+}
+
+@media (max-width: 1320px) {
+    header .header__container {
+        align-items: start;
+    }
+
+    .nav {
+        margin-top: 10px;
+        justify-content: flex-end;
+    }
+
+    .logo h2 {
+        font-weight: normal;
+        font-size: 1.7em;
+    }
+
+    .header__container .btn {
+        margin-top: 15px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    header .header__container {
+        max-width: 1040px;
+    }
+
+    .logo {
+        margin-right: 50px;
+    }
+
+    .logo h2 {
+        font-weight: normal;
+        font-size: 1.5em;
+    }
+
+    .nav__adaptive {
+        display: block;
+    }
+    .header__container .menuBtn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        border-radius: 10px;
+        z-index: 100;
+    }
+
+    .menuBtn .menuBtn__burger {
+        width: 35px;
+        height: 4px;
+        background: #212B31;
+        border-radius: 2.5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+        transition: all .5s ease-in-out;
+    }
+
+    .menuBtn__burger::before,
+    .menuBtn__burger::after {
+        content: '';
+        position: absolute;
+        width: 35px;
+        height: 4px;
+        background: #212B31;
+        border-radius: 2.5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+        transition: all .5s ease-in-out;
+    }
+
+    .menuBtn__burger::before {
+        transform: translateY(-12px);
+    }
+
+    .menuBtn__burger::after {
+        transform: translateY(12px);
+    }
+
+    .menuBtn.openBtn .menuBtn__burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .menuBtn.openBtn .menuBtn__burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    .menuBtn.openBtn .menuBtn__burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+    
+    .openBtn {
+        background: transparent;
+    }
+    .nav {
+        display: none;
+    }
+    .header__container .open {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        right: 0;
+        min-width: 30%;
+        max-height: 100%;
+        background: #FFDD76;
+        flex-direction: column;
+        align-items: start;
+        padding-top: 50px;
+        border-radius: 0 0 0 10%;
+        animation: vsplivashka .4s linear 1;
+        opacity: .8;
+    }
+
+
+    @keyframes vsplivashka {
+        0%{
+            opacity: 0;
+            transform: translateX(5000px);
+        }
+        100% {
+            opacity: .8;
+            transform: translateX(0);
+        }
+    }
+
+
+    .header__container .open li {
+        margin-bottom: 15px;
+    }
+
+    .header__container .open li a {
+        font-size: .7em;
+    }
+
+    .header__container .open .btn {
+        margin-bottom: 30px;
+    }
+
+
+
+}
+
+@media (max-width: 860px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero .cars {
+        padding: 0 35px;
+    }
+}
+
+@media (max-width: 740px) {
+    .header__container .open {
+        width: 60%;
+    }
+    .header__container .menuBtn {
+        width: 40px;
+        height: 40px;
+    }
+        .menuBtn .menuBtn__burger {
+        width: 30px;
+        height: 3px;
+    }
+
+    .menuBtn__burger::before,
+    .menuBtn__burger::after {
+        width: 30px;
+        height: 3px;
+    }
+
+    .hero .cars {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 630px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+}
+
+

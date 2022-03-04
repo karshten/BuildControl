@@ -1,0 +1,60 @@
+.work {
+    margin-top: 120px;
+}
+
+.work .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work
+.container
+.work__left
+p {
+    max-width: 462px;
+    margin: 21px 0 60px;
+}
+
+.work
+.container
+.work__right__list
+li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.work
+.container
+.work__right__list
+li p {
+    margin: 10px 0 0 55px;
+    max-width: 448px;
+
+}
+
+.work
+.container
+.work__right__list
+li span {
+    margin-right: 47px;
+    color: #72787D;
+}
+
+.work
+.work__right
+.wrap__btns
+.btn {
+    margin: 0 22px 0 0;
+}
+
+
+@media (max-width: 740px) {
+    .work .wrap__btns {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .work .wrap__btns button {
+        margin-bottom: 25px;
+    }
+}
